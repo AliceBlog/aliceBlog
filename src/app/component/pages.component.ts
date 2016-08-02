@@ -5,7 +5,6 @@ import { Component,ElementRef, ViewEncapsulation ,
   transition,
   animate} from '@angular/core';
 
-import { ROUTER_DIRECTIVES } from '@angular/router';
 // import { BaPageTop, BaContentTop, BaSidebar, BaBackTop } from '../theme/components';
 
 
@@ -20,7 +19,6 @@ import { AppState } from './../app.state';
   // directives: [BaPageTop, BaSidebar, BaContentTop, BaBackTop],
   template: require('./pages.html'),
   providers:[MenusService],
-  directives: [ROUTER_DIRECTIVES],
   // animations: [
   //    trigger('heroState', [
   //      state('inactive', style({
