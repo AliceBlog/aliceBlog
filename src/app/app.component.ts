@@ -32,10 +32,10 @@ import { BaThemePreloader, BaThemeSpinner,Logger } from './services';
   //   name: 'Login',
   //   component: Login
   // },
-  {
-    path: '/**',
-    redirectTo: ['Pages']
-  }
+  // {
+  //   path: '/**',
+  //   redirectTo: ['Pages']
+  // }
 ])
 export class App {
 

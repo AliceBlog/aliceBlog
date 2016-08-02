@@ -5,9 +5,11 @@ import { Component,ElementRef, ViewEncapsulation ,
   transition,
   animate} from '@angular/core';
 import { RouteConfig } from '@angular/router-deprecated';
-
+import { ROUTER_DIRECTIVES } from '@angular/router';
 // import { BaPageTop, BaContentTop, BaSidebar, BaBackTop } from '../theme/components';
 import { Dashboard } from './dashboard';
+import { Technical } from './technical';
+
 // import { Managers } from './manager/manager.component';
 import { MenusService } from './menus.service';
 import { MenusModel } from './menus.model';
@@ -19,6 +21,7 @@ import { AppState } from './../app.state';
   // directives: [BaPageTop, BaSidebar, BaContentTop, BaBackTop],
   template: require('./pages.html'),
   providers:[MenusService],
+  directives: [ROUTER_DIRECTIVES],
   // animations: [
   //    trigger('heroState', [
   //      state('inactive', style({
@@ -40,7 +43,10 @@ import { AppState } from './../app.state';
     component: Dashboard,
     path: '/dashboard',
     useAsDefault: true,
-
+  },{
+    name: 'Technical',
+    component: Dashboard,
+    path: '/technical',
   }
 ])
 export class Pages {
@@ -54,8 +60,6 @@ export class Pages {
     this.menusService.getMenuItems().then(menItem=>{
       console.info(menItem);
       this.data = menItem;
-
-
     });
 
   }

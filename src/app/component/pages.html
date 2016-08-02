@@ -1,11 +1,16 @@
 
 <div class="deskbook">
 
-  <div class="menu"  *ngFor="let item of data"  (dblclick)="openGoLink(item)">
-    <div class="img">
-      <img src={{item.icon}}/>
-    </div>
-   <div>{{item.name}}</div>
+  <div class="menu"  *ngFor="let item of data;let i = index"  (dblclick)="openGoLink(item)">
+    <div class="file" *ngIf="i%2==0">
+  		      <div class="flip"></div>
+  		      <div class="holes"></div>
+  		      <div class="lines"></div>
+  		    </div>
+          <div class="mail" *ngIf="i%2==1">
+		      <div class="shadows"></div>
+		    </div>
+   <div class="text">{{item.name}}</div>
   </div>
   <div class="window" *ngIf="showWindow">
     <div class="windowBar">
