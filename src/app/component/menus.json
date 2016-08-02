@@ -1,0 +1,16 @@
+[
+  {"id":"1","name":"主页","icon":"http://aliceblog.oss-cn-hangzhou.aliyuncs.com/img/menu1.jpg"},
+  {"id":"2","name":"个人档案","icon":"http://aliceblog.oss-cn-hangzhou.aliyuncs.com/img/menu2.png"},
+  {"id":"3","name":"技术文档","icon":"http://aliceblog.oss-cn-hangzhou.aliyuncs.com/img/menu3.jpg"},
+  {"id":"4","name":"生活写照","icon":"http://aliceblog.oss-cn-hangzhou.aliyuncs.com/img/menu2.png"},
+  {"id":"5","name":"空间日志","icon":"http://aliceblog.oss-cn-hangzhou.aliyuncs.com/img/menu1.jpg"},
+  {"id":"6","name":"爱の花园","icon":"http://aliceblog.oss-cn-hangzhou.aliyuncs.com/img/menu3.jpg"},
+  {"id":"7","name":"作品存档","icon":"http://aliceblog.oss-cn-hangzhou.aliyuncs.com/img/menu1.jpg"},
+  {"id":"8","name":"其他入口","icon":"http://aliceblog.oss-cn-hangzhou.aliyuncs.com/img/menu3.jpg"},
+  {"id":"9","name":"只为这一次","icon":"http://aliceblog.oss-cn-hangzhou.aliyuncs.com/img/menu2.png"},
+  {"id":"10","name":"菜单小生","icon":"http://aliceblog.oss-cn-hangzhou.aliyuncs.com/img/menu3.jpg"},
+  {"id":"11","name":"princess","icon":"http://aliceblog.oss-cn-hangzhou.aliyuncs.com/img/menu1.jpg"},
+  {"id":"12","name":"alice","icon":"http://aliceblog.oss-cn-hangzhou.aliyuncs.com/img/menu2.png"},
+  {"id":"13","name":"jermine","icon":"http://aliceblog.oss-cn-hangzhou.aliyuncs.com/img/menu1.jpg"},
+  {"id":"14","name":"备忘录","icon":"http://aliceblog.oss-cn-hangzhou.aliyuncs.com/img/menu3.jpg"}
+]

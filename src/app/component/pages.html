@@ -1,0 +1,21 @@
+
+<div class="deskbook">
+
+  <div class="menu"  *ngFor="let item of data"  (dblclick)="openGoLink(item)">
+    <div class="img">
+      <img src={{item.icon}}/>
+    </div>
+   <div>{{item.name}}</div>
+  </div>
+  <div class="window" *ngIf="showWindow">
+    <div class="windowBar">
+      <div class="close" (click)="closeWindow()">×</div>
+      <div class="small">—</div>
+      <div class="large">□</div>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>
