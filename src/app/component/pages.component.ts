@@ -4,11 +4,10 @@ import { Component,ElementRef, ViewEncapsulation ,
   style,
   transition,
   animate} from '@angular/core';
-import { RouteConfig } from '@angular/router-deprecated';
+
 import { ROUTER_DIRECTIVES } from '@angular/router';
 // import { BaPageTop, BaContentTop, BaSidebar, BaBackTop } from '../theme/components';
-import { Dashboard } from './dashboard';
-import { Technical } from './technical';
+
 
 // import { Managers } from './manager/manager.component';
 import { MenusService } from './menus.service';
@@ -37,18 +36,6 @@ import { AppState } from './../app.state';
   //    ])
   //  ]
 })
-@RouteConfig([
-  {
-    name: 'Dashboard',
-    component: Dashboard,
-    path: '/dashboard',
-    useAsDefault: true,
-  },{
-    name: 'Technical',
-    component: Dashboard,
-    path: '/technical',
-  }
-])
 export class Pages {
   public data:MenusModel[] =[]; //数据内容
   public showWindow:boolean =false; //窗口是否显示

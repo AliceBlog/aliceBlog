@@ -1,4 +1,5 @@
 import {Component, ViewEncapsulation} from '@angular/core';
+import { ROUTER_DIRECTIVES } from "@angular/router";
 
 // import {PieChart} from './pieChart';
 // import {TrafficChart} from './trafficChart';
@@ -9,7 +10,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
 @Component({
   selector: 'dashboard',
   pipes: [],
-  // directives: [PieChart, TrafficChart, Feed, Todo, BaCard],
+  directives: [ROUTER_DIRECTIVES],
   encapsulation: ViewEncapsulation.None,
   styles: [require('./dashboard.scss')],
   template: require('./dashboard.html')
