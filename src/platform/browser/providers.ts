@@ -7,6 +7,7 @@ import { FORM_PROVIDERS, LocationStrategy, HashLocationStrategy } from '@angular
 
 // Angular 2 Http
 import { HTTP_PROVIDERS } from '@angular/http';
+import { APP_ROUTER_DIRECTIVES } from "../../app/app.router";
 /*
  * Application Providers/Directives/Pipes
  * providers/directives/pipes that only live in our browser environment
@@ -14,6 +15,7 @@ import { HTTP_PROVIDERS } from '@angular/http';
 export const APPLICATION_PROVIDERS = [
     ...FORM_PROVIDERS,
     ...HTTP_PROVIDERS,
+    ...APP_ROUTER_DIRECTIVES,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
 ];
 
