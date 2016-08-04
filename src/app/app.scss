@@ -16,6 +16,20 @@
     /* Firefox 3.6 - 15 */
     background: radial-gradient(50% 50%, closest-side, rgba(0,162,224,1), #007098, #014e6b);
     /* 标准的语法（必须放在最后） */
+    .tip {
+        position: absolute;
+        bottom: 40px;
+        right: 20px;
+    }
+    .copyRight{
+      position: absolute;
+      bottom: 5px;
+      width: 100%;
+      left: 0;
+      text-align: center;
+      font-size: 10px;
+      color: #fff;
+    }
     .menu {
         width: 90px;
         max-height: 95px;
@@ -37,7 +51,6 @@
             overflow: hidden;
             img {
                 width: 100%;
-
             }
         }
         .text {
@@ -47,6 +60,4 @@
             margin-top: 10px;
         }
     }
-
-
 }
