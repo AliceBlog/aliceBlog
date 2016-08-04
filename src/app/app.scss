@@ -1,1 +1,50 @@
-// @import "theme/theme";
+.deskbook {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,162,224,1);
+    color: #fff;
+    background: -webkit-radial-gradient(50% 50%, closest-side, rgba(0,162,224,1), #007098, #014e6b);
+    /* Safari 5.1 - 6.0 */
+    background: -o-radial-gradient(50% 50%, closest-side,rgba(0,162,224,1), #007098, #014e6b);
+    /* Opera 11.6 - 12.0 */
+    background: -moz-radial-gradient(50% 50%, closest-side,rgba(0,162,224,1), #007098, #014e6b);
+    /* Firefox 3.6 - 15 */
+    background: radial-gradient(50% 50%, closest-side, rgba(0,162,224,1), #007098, #014e6b);
+    /* 标准的语法（必须放在最后） */
+    .menu {
+        width: 90px;
+        max-height: 95px;
+        margin: 20px;
+        overflow: hidden;
+        display: inline-block;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        .img {
+            margin: auto;
+            width: 80%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            img {
+                width: 100%;
+
+            }
+        }
+        .text {
+            text-align: center;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+
+
+}

@@ -1,5 +1,10 @@
-<!--<nav>-->
-    <!--<a routerLink="['./dashboard']" routerLinkActive="active">主面板</a>-->
-    <!--<a routerLink="['./technical']" routerLinkActive="active">技术</a>-->
-<!--</nav>-->
+<div class="deskbook">
+
+  <div class="menu"  *ngFor="let item of data;let i = index" [routerLink]="[item.url]" (dblclick)="openGoLink(item)">
+<div class="img"><img src="{{item.icon}}"/></div>
+   <div class="text">{{item.name}}</div>
+  </div>
+<clock></clock>
+
+</div>
 <router-outlet></router-outlet>

@@ -1,5 +1,4 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-import { ROUTER_DIRECTIVES } from "@angular/router";
 
 // import {PieChart} from './pieChart';
 // import {TrafficChart} from './trafficChart';
@@ -8,14 +7,14 @@ import { ROUTER_DIRECTIVES } from "@angular/router";
 // import {BaCard} from '../../theme/components';
 
 @Component({
-  selector: 'dashboard',
+  selector: 'life',
   pipes: [],
-  directives: [ROUTER_DIRECTIVES],
+  // directives: [PieChart, TrafficChart, Feed, Todo, BaCard],
   encapsulation: ViewEncapsulation.None,
-  styles: [require('./dashboard.scss')],
-  template: require('./dashboard.html')
+  styles: [require('./life.scss')],
+  template: require('./life.html')
 })
-export class Dashboard {
+export class Life {
 
   constructor() {
 

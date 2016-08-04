@@ -1,4 +1,5 @@
 import {Component, ViewEncapsulation} from '@angular/core';
+import { ROUTER_DIRECTIVES } from "@angular/router";
 
 // import {PieChart} from './pieChart';
 // import {TrafficChart} from './trafficChart';
@@ -7,14 +8,14 @@ import {Component, ViewEncapsulation} from '@angular/core';
 // import {BaCard} from '../../theme/components';
 
 @Component({
-  selector: 'technical',
+  selector: 'technology',
   pipes: [],
-  // directives: [PieChart, TrafficChart, Feed, Todo, BaCard],
+  directives: [ROUTER_DIRECTIVES],
   encapsulation: ViewEncapsulation.None,
-  styles: [require('./technical.scss')],
-  template: require('./technical.html')
+  styles: [require('./technology.scss')],
+  template: require('./technology.html')
 })
-export class Technical {
+export class Technology {
 
   constructor() {
 

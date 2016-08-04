@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { MenusModel } from './menus.model';
 import { Http } from "@angular/http";
-import { menuUrl } from './../../api.config';
+import { menuUrl } from './../api.config';
 import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class MenusService {
