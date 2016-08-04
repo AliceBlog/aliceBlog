@@ -16,8 +16,7 @@ import { APP_ROUTER_DIRECTIVES } from './app/app.router';
  */
 import { App, APP_PROVIDERS } from './app';
 import { ROUTER_DIRECTIVES } from "@angular/router";
-
-
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 /*
  * Bootstrap our Angular app with a top level component `App` and inject
  * our Services and Providers into Angular's dependency injection
@@ -31,7 +30,8 @@ export function main(initialHmrState?:any):Promise<any> {
         ...PIPES,
         ...APP_ROUTER_DIRECTIVES,
         ...APP_PROVIDERS,
-        ...ROUTER_DIRECTIVES
+        ...ROUTER_DIRECTIVES,
+        { provide: LocationStrategy, useClass: HashLocationStrategy }
     ])
         .then(decorateComponentRef)
         .catch(err => console.error(err));

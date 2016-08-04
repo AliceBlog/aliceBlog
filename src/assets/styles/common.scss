@@ -1,0 +1,48 @@
+@mixin background-color-two($first,$second) {
+    background-color: $first;
+    background: -moz-linear-gradient(top, $first 0%, $second 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$first), color-stop(100%, $second));
+    background: -webkit-linear-gradient(top, $first 0%, $second 100%);
+    background: -o-linear-gradient(top, $first 0%, $second 100%);
+    background: -ms-linear-gradient(top, $first 0%, $second 100%);
+    background: linear-gradient(to bottom, $first 0%, $second 100%);
+}
+@mixin background-color-three($first,$second,$third) {
+    background-color: $first;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$first), color-stop(50%, $second), color-stop(100%, $third));
+    background: -webkit-linear-gradient(top, $first 0%, $second 50%,$third 100%);
+    background: -o-linear-gradient(top, $first 0%, $second 50%,$third 100%);
+    background: -ms-linear-gradient(top, $first 0%, $second 50%,$third 100%);
+    background: linear-gradient(to bottom, $first 0%, $second 50%,$third 100%);
+    &:hover {
+        background: $first;
+    }
+}
+@mixin window-bar-but($first,$second,$third) {
+  @include background-color-three($first,$second,$third);
+    width: 30px;
+    height: 18px;
+    color: #fff;
+    display: inline-block;
+    text-shadow: #ccc 0 1px 0;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 10%;
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+@mixin window{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80%;
+  border-radius: 10px;
+  min-width: 800px;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  overflow: hidden;
+  z-index: 1000;
+  background-color: rgba(255,255,255,1);
+}
