@@ -1,6 +1,6 @@
 import { RouterConfig, provideRouter } from "@angular/router";
 import { Pages } from "./component/pages.component";
-import { Technology } from "./component/technology";
+import { Technology} from "./component/technology";
 import { Life } from "./component/life";
 import { Works } from "./component/works";
 import { About } from "./component/about";

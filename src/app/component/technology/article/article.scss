@@ -1,0 +1,211 @@
+@import "./../../../../assets/styles/common.scss";
+.article{
+  width: 90%;
+  margin: auto;
+
+  header{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    h2{
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .dateBox{
+      width: 100%;
+      text-align: right;
+      span{
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+    .back{
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      border-radius: 50%;
+      font-size: 30px;
+      color: #ccc;
+      padding: 10px;
+      border: 1px solid #ccc;
+      font-weight: bold;
+      cursor: pointer;
+      text-shadow: 1px 1px 1px #aaa;
+      &:hover{
+        box-shadow: 3px 3px 3px #aaa;
+      }
+    }
+  }
+article{
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.wall{
+  @include background-color-round(#124a38,#103525,#0d2516);
+  width: 95%;
+  max-width: 800px;
+  margin: auto;
+  margin-top: 30px;
+  height: 300px;
+  border: 2px solid #775325;
+  border-radius: 2px;
+  position: relative;
+  box-shadow:
+      0 0 0 2px #946932,
+      0 0 0 7px #956b35,
+      0 0 0 8.5px #825a27,
+      0 0 0 9px #7c5727;
+      margin-bottom: 50px;
+      .title{
+        position: relative;
+        left: 10px;
+        top: 10px;
+      }
+      .writeBox{
+        position: absolute;
+        bottom: -5px;
+        width: 60px;
+        left: 50%;
+        height: 20px;
+        cursor: pointer;
+        .write{
+          width: 60px;
+          height: 5px;
+          position: absolute;
+          bottom: 5px;
+
+            @include background-color-three-nocur(#f0f0f0,#c2c2c2,#707070);
+
+        }
+
+      }
+
+      .eraser{
+        cursor: pointer;
+        width: 70px;
+        height: 15px;
+        position: absolute;
+        bottom: 0px;
+        border-top: 3px solid #c0bec0;
+        left: 35%;
+          @include background-color-two(#382e21,#1e1d1c);
+      }
+      .comment{
+        cursor: pointer;
+        position: absolute;
+          .icon{
+          width: 20px;
+          height: 20px;
+          // background-color: rgb(189, 235, 154);
+          position: relative;
+          z-index: 3;
+          margin-left: 10px;
+          background-size: 100% 100%;
+        }
+        .text{
+          letter-spacing: 1px;
+           outline: none;
+           border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+          max-width: 150px;
+          padding-left: 30px;
+          padding-right: 10px;
+          line-height: 36px;
+          height: 36px;
+          margin-top: -30px;
+          // margin-left: 20px;
+          border-radius: 10px;
+          text-overflow: -o-ellipsis-lastline;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+
+        }
+
+      }
+      .style2{
+        top: 70px;
+        left: 20px;
+        .icon{
+          background-image: url("./../../../../assets/img/claws2.png");
+
+        }
+        .text{
+          border: dotted 2px rgb(185, 241, 204);
+          background-color: rgba(185, 241, 204,0.3);
+        }
+      }
+      .style0{
+        top: 50px;
+        left: 250px;
+        .icon{
+          background-image: url("./../../../../assets/img/claws0.png");
+
+        }
+        .text{
+          border: solid 2px rgb(242, 241, 185);
+          background-color: rgba(242, 241, 185,0.3);
+              border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+        }
+      }
+      .style1{
+        top: 110px;
+        left: 400px;
+        .text{
+          border: dashed 2px rgb(185, 242, 236);
+          background-color: rgba(185, 242, 236,0.3);
+          border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+        }
+        .icon{
+          background-image: url("./../../../../assets/img/claws1.png");
+
+        }
+      }
+      .style3{
+        top: 150px;
+        left: 70px;
+        .text{
+          border: dotted 2px rgb(242, 185, 228);
+          background-color: rgba(242, 185, 228,0.3);
+              border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+        }
+        .icon{
+          background-image: url("./../../../../assets/img/claws3.png");
+
+        }
+
+      }
+      .style4{
+        top: 200px;
+        left: 350px;
+        .text{
+          border: dotted 3px rgb(241, 204, 185);
+          background-color: rgba(241, 204, 185,0.3);
+          border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+        }
+        .icon{
+          background-image: url("./../../../../assets/img/claws4.png");
+
+        }
+      }
+      .comment:hover{
+        // top: 10px;
+        // left:10px;
+        z-index: 100;
+        .text{
+            background-color:rgba(0,0,0,0.8);
+            max-width: none;
+            -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,0.7);
+            -moz-box-shadow: 3px 3px 3px rgba(0,0,0,0.7);
+            box-shadow: 3px 3px 3px rgba(0,0,0,0.7);
+            height:auto;
+            text-overflow:auto;
+            overflow: auto;
+            display: block;
+            -webkit-line-clamp: auto;
+            -webkit-box-orient: vertical;
+
+        }
+      }
+}
+}

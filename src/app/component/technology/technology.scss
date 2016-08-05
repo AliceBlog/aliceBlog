@@ -21,12 +21,26 @@
             @include window-bar-but(#85f28a,#5bd761,#85f28a);
         }
     }
+    .showMore{
+      height: 95%;
+      overflow-y: auto;
+      margin: auto;
+      width: 100%;
+      position: absolute;
+    @include background-color-two(#fbfbfb,#f2f0f0);
+      // z-index: 500;
+      display: none;
+    }
+    .showArticle{
+      display: block;
+      z-index: 500;
+    }
     .content {
         height: 95%;
         overflow-y: auto;
         margin: auto;
         width: 100%;
-        position: relative;
+        position: absolute;
         background-color: #eee;
         .header {
             height: 120px;
