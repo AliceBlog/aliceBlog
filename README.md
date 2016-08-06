@@ -10,7 +10,7 @@
 * typings install
 * npm install
 * npm run start
-> **注意：**node-saa在第一次install的时候不一定能成功，如果运行时报node-sass的错误，那...你毫无选择，再装一次**。
+> **注意：**node-sass在第一次install的时候不一定能成功，如果运行时报node-sass的错误，那...你毫无选择，再装一次**。
 
 ##有问题反馈
 有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
