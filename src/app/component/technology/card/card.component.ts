@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component, ViewEncapsulation,Input} from '@angular/core';
 
 @Component({
   selector: 'card',
@@ -8,6 +8,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
   template: require('./card.html')
 })
 export class Card {
+  @Input() cardData;
 
   constructor() {
 

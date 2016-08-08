@@ -20,52 +20,15 @@
             <span class="search">search</span>
             <div class="hotSearch">
                 <span>热门搜索：</span>
-                <span>Html</span>
-                <span>css</span>
-                <span>angular</span>
-                <span>angular2</span>
-                <span>typescript</span>
-                <span>webpack</span>
-                <span>ionic</span>
-                <span>react</span>
+                <span *ngFor="let item of hotTag;let i = index" >{{item}}</span>
+
             </div>
         </div>
       <div class="cardBox">
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
-        <card (click)="lookArticle()"></card>
+        <card *ngFor="let item of data;let i = index" [cardData]="item" (click)="lookArticle()">
+
+        </card>
+
       </div>
     </div>
     <div class="showMore"  [ngClass]="{showArticle: showArticle}">

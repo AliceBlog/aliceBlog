@@ -152,7 +152,8 @@
             }
             .search {
                 background-color: #209b85;
-                // box-shadow: inset 1px 1px 1px #163040;
+                position: relative;
+                top: -1px;
                 padding: 5.5px;
                 border: 1px solid #999;
                 cursor: pointer;
@@ -179,6 +180,9 @@
                     text-decoration: underline;
                     &:hover {
                         color: #fff;
+                    }
+                    &:nth-child(1){
+                      text-decoration: none;
                     }
                 }
             }

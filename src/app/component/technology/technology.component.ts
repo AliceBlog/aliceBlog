@@ -1,4 +1,5 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import { Component , ViewEncapsulation} from '@angular/core';
+import { TechnologyService } from './technology.service';
 import {Card} from './card';
 import {Article} from './article';
 @Component({
@@ -8,12 +9,21 @@ import {Article} from './article';
   styles: [require('./technology.scss')],
   template: require('./technology.html'),
   directives: [Card,Article],
+  providers: [TechnologyService],
 
 })
 export class Technology {
 public showArticle:boolean;
-  constructor() {
-
+public data:[any];
+public hotTag:[string];
+  constructor(
+  private technologyService:TechnologyService
+  ) {
+    this.technologyService.getTechnologyItems().then(technologyItem=>{
+      console.info(technologyItem);
+      this.data = technologyItem.cardList;
+      this.hotTag=technologyItem.hotTag;
+    });
   }
 lookArticle(){
   this.showArticle=true;

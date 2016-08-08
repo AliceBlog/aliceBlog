@@ -1,23 +1,16 @@
 <div class="card">
   <div class="box">
   <div class="imgBox">
-    <img src="./../../../assets/img/aliceBlog.jpg"/>
+    <img src="{{cardData.img}}"/>
   </div>
-  <h3>标题君标题君标题君标题君标题君标题君标题君标题君标题君标题君标题君标题君标题君</h3>
+  <h3>{{cardData.title}}</h3>
   <div class="tags">
-    <span>标签一</span>
-    <span>标签二</span>
-    <span>标签三</span>
-    <span>标签四</span>
+    <span *ngFor="let item of cardData.tag;let i = index">{{item}}</span>
   </div>
 </div>
 <div class="layer">
   <div class="text">
-    简介简介简介简介简介简介简介一大堆啊简介简介简介简介简介简介简介一大堆啊简介简介简介简介简介简介简介一大堆啊简介简介简介简介简介简介简介一大堆啊
-    简介简介简介简介简介简介简介一大堆啊简介简介简介简介简介简介简介一大堆啊简介简介简介简介简介简介简介一大堆啊简介简介简介简介简介简介简介一大堆啊
-    简介简介简介简介简介简介简介一大堆啊简介简介简介简介简介简介简介一大堆啊简介简介简介简介简介简介简介一大堆啊简介简介简介简介简介简介简介一大堆啊
-    简介简介简介简介简介简介简介一大堆啊简介简介简介简介简介简介简介一大堆啊简介简介简介简介简介简介简介一大堆啊简介简介简介简介简介简介简介一大堆啊
-
+    {{cardData.desc}}
   </div>
 </div>
 </div>
