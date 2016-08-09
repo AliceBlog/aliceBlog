@@ -1,15 +1,9 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-
-// import {PieChart} from './pieChart';
-// import {TrafficChart} from './trafficChart';
-// import {Feed} from './feed';
-// import {Todo} from './todo';
-// import {BaCard} from '../../theme/components';
-
+import {Classification} from './classification';
 @Component({
   selector: 'life',
   pipes: [],
-  // directives: [PieChart, TrafficChart, Feed, Todo, BaCard],
+  directives: [Classification],
   encapsulation: ViewEncapsulation.None,
   styles: [require('./life.scss')],
   template: require('./life.html')

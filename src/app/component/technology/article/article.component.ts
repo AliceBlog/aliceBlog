@@ -14,8 +14,17 @@ export class Article {
   }
 @Input() hero;
 @Output() onVoted = new EventEmitter<boolean>();
+public showComment:boolean=false;
 vote(agreed: boolean) {
-  console.log("into");
     this.onVoted.emit(agreed);
+  }
+  conmmentShow(){
+    this.showComment=true;
+  }
+  commentOk(){
+    this.showComment=false;
+  }
+  commentCancel(){
+    this.showComment=false;
   }
 }

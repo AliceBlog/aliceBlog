@@ -41,6 +41,7 @@
         margin: auto;
         width: 100%;
         position: absolute;
+        color: #000;
         background-color: #eee;
         .header {
             height: 120px;
@@ -153,7 +154,7 @@
             .search {
                 background-color: #209b85;
                 position: relative;
-                top: -1px;
+                // top: -1px;
                 padding: 5.5px;
                 border: 1px solid #999;
                 cursor: pointer;

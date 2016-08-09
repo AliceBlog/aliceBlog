@@ -76,7 +76,10 @@ article{
             @include background-color-three-nocur(#f0f0f0,#c2c2c2,#707070);
 
         }
-
+        &:hover{
+            @include transform(-30deg);
+            bottom:8px;
+        }
       }
 
       .eraser{
@@ -88,6 +91,7 @@ article{
         border-top: 3px solid #c0bec0;
         left: 35%;
           @include background-color-two(#382e21,#1e1d1c);
+
       }
       .comment{
         cursor: pointer;
@@ -206,6 +210,56 @@ article{
             -webkit-box-orient: vertical;
 
         }
+      }
+      .commentBox{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 300;
+        background-color: rgba(0,0,0,0.8);
+        h2{
+          padding-left: 25px;
+        }
+        textarea{
+          width: 86%;
+          padding: 2%;
+          font-size: 16px;
+          margin: auto;
+          margin-top: 40px;
+          display: block;
+          height: 100px;
+          outline: none;
+          border-radius: 10px;
+          resize: none;
+        }
+        .btnBar{
+          text-align: center;
+          position: absolute;
+          bottom: 20px;
+          width: 100%;
+          button{
+            display: inline-block;
+            width: 130px;
+            cursor: pointer;
+            height: 30px;
+            border-radius: 10px;
+            font-size: 16px;
+            border: 0;
+            @include background-color-three-nocur(#a9e9e7,#8cc1bf,#a9e9e7);
+            color: #fff;
+            outline: none;
+          }
+
+          button:nth-child(2){
+            @include background-color-three-nocur(#c2c2c2,#707070,#c2c2c2);
+            margin-left: 15px;
+
+          }
+
+        }
+
       }
 }
 }

@@ -3,11 +3,13 @@ import './page/loader/app.loader.ts';
 import { Component,ElementRef, ViewEncapsulation,ViewContainerRef } from '@angular/core';
 import { AppState } from './app.state';
 import { BaThemePreloader, BaThemeSpinner,Logger } from './services';
+import { JSONP_PROVIDERS }  from '@angular/http';
 import { RouterLinkActive, ROUTER_DIRECTIVES } from '@angular/router';
 import { MenusService } from './menus.service';
 import { MenusModel } from './menus.model';
 import { Clock } from "./component/clock";
 import {Router}    from '@angular/router';
+
 /*
  * App Component
  * Top Level Component
@@ -16,7 +18,7 @@ import {Router}    from '@angular/router';
   selector: 'app',
   pipes: [],
   directives: [ROUTER_DIRECTIVES,RouterLinkActive,Clock],
-  providers: [BaThemeSpinner,Logger,MenusService],
+  providers: [BaThemeSpinner,Logger,MenusService,JSONP_PROVIDERS],
   encapsulation: ViewEncapsulation.None,
   styles: [require('./app.scss')],
   template: require('./app.html')
@@ -25,6 +27,7 @@ import {Router}    from '@angular/router';
 export class App {
   public data:MenusModel[] =[]; //数据内容
   public showWindow:boolean =false; //窗口是否显示
+  public  items;
    private router: Router;
   viewContainerRef:ViewContainerRef;
 
@@ -38,6 +41,7 @@ export class App {
           console.info(menItem);
           this.data = menItem;
         });
+
   }
   ngOnInit() {
 

@@ -24,6 +24,10 @@ public hotTag:[string];
       this.data = technologyItem.cardList;
       this.hotTag=technologyItem.hotTag;
     });
+    // this.technologyService.getMenuItems().subscribe(res=> {
+    //   this.data = res;
+    // });
+    // this.data =this.technologyService.getTechnologyItems();
   }
 lookArticle(){
   this.showArticle=true;

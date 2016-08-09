@@ -83,9 +83,18 @@
             <div class="icon"></div>
             <div class="text">这是一条评论这是一条评论这是一条评论这是一条评论这是一条评</div>
         </div>
-        <div class="writeBox" title="留下爪印">
-        <div class="write"></div>
+        <div class="writeBox" (click)="conmmentShow()" title="留下爪印">
+        <div class="write" ></div>
       </div>
-        <div class="eraser" title="吐槽一下"></div>
+        <div class="eraser" title="吐槽一下" (click)="conmmentShow()"></div>
+        <div class="commentBox" *ngIf="showComment">
+          <h2>您的鼓励，我的动力</h2>
+          <textarea></textarea>
+          <div class="btnBar">
+            <button (click)="commentOk()">确定</button>
+            <button (click)="commentCancel()">取消</button>
+          </div>
+
+        </div>
     </div>
 </div>

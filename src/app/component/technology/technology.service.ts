@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Http } from "@angular/http";
-import { technologyListUrl,menuUrl } from './../../../api.config';
+import { Http ,Jsonp} from "@angular/http";
+import { technologyListUrl } from './../../../api.config';
 import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class TechnologyService {
-constructor(private http:Http){}
+constructor(private http:Http,private jsonp: Jsonp){}
 private handleError(error: any) {
   console.error('An error occurred', error);
   return Promise.reject(error.message || error);
@@ -16,4 +16,11 @@ public getTechnologyItems():Promise<any> {
     })
     .catch(this.handleError);
   };
+
+//   public getTechnologyItems () {
+//
+//  return this.jsonp
+//             .get(technologyListJsonpUrl)
+//             .map(request => <string[]> request.json()[0]);
+// }
 }
