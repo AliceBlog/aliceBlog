@@ -8,20 +8,43 @@
   <div class="content">
 
     <div class="classificationList">
-      <classification></classification>
-      <classification></classification>
-      <classification></classification>
-      <classification></classification>
-      <classification></classification>
-      <classification></classification>
-      <classification></classification>
-      <classification></classification>
-      <classification></classification>
-      <classification></classification>
-      <classification></classification>
-      <classification></classification>
-      <classification></classification>
+      <classification (onShowPhoto)="onShowPhoto($event)"></classification>
+      <classification (onShowPhoto)="onShowPhoto($event)"></classification>
+      <classification (onShowPhoto)="onShowPhoto($event)"></classification>
+      <classification (onShowPhoto)="onShowPhoto($event)"></classification>
+      <classification (onShowPhoto)="onShowPhoto($event)"></classification>
+      <classification (onShowPhoto)="onShowPhoto($event)"></classification>
+      <classification (onShowPhoto)="onShowPhoto($event)"></classification>
+      <classification (onShowPhoto)="onShowPhoto($event)"></classification>
+      <classification (onShowPhoto)="onShowPhoto($event)"></classification>
+      <classification (onShowPhoto)="onShowPhoto($event)"></classification>
+      <classification (onShowPhoto)="onShowPhoto($event)"></classification>
+      <classification (onShowPhoto)="onShowPhoto($event)"></classification>
+      <classification (onShowPhoto)="onShowPhoto($event)"></classification>
     </div>
 
+  </div>
+  <div class="photoShow" *ngIf="showPhotoLayer">
+    <div class="back" (click)="onShowPhoto(false)">O(∩_∩)O回去找爸爸</div>
+    <photoShow [number]="0" (onVoted)="onVoted($event)"></photoShow>
+    <photoShow [number]="1" (onVoted)="onVoted($event)"></photoShow>
+    <photoShow [number]="2" (onVoted)="onVoted($event)"></photoShow>
+    <photoShow [number]="3" (onVoted)="onVoted($event)"></photoShow>
+    <photoShow [number]="4" (onVoted)="onVoted($event)"></photoShow>
+    <photoShow [number]="5" (onVoted)="onVoted($event)"></photoShow>
+    <photoShow [number]="6" (onVoted)="onVoted($event)"></photoShow>
+    <photoShow [number]="7" (onVoted)="onVoted($event)"></photoShow>
+    <photoShow [number]="0" (onVoted)="onVoted($event)"></photoShow>
+    <photoShow [number]="1" (onVoted)="onVoted($event)"></photoShow>
+    <photoShow [number]="2" (onVoted)="onVoted($event)"></photoShow>
+    <photoShow [number]="3" (onVoted)="onVoted($event)"></photoShow>
+    <photoShow [number]="4" (onVoted)="onVoted($event)"></photoShow>
+    <photoShow [number]="5" (onVoted)="onVoted($event)"></photoShow>
+    <photoShow [number]="6" (onVoted)="onVoted($event)"></photoShow>
+    <photoShow [number]="7" (onVoted)="onVoted($event)"></photoShow>
+
+  </div>
+  <div class="photoBigShow" *ngIf="showBigPhoto" (click)="onVoted(false)">
+    <img [ngStyle]="imgDeal('http://www.witdor.com/aliceBlog/img/menu1.jpg')" src="http://www.witdor.com/aliceBlog/img/menu1.jpg"/>
   </div>
 </div>

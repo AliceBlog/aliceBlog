@@ -33,5 +33,39 @@ width: 100%;
 position: absolute;
 
     }
+    .photoShow{
+      color: #fff;
+      background-color:#354a48;
+      padding: 2%;
+      height: 90%;
+      overflow-y: auto;
+      margin: auto;
+      width: 100%;
+      position: absolute;
+      padding-bottom: 50px;
+.back{
+  width: 220px;
+  cursor: pointer;
+  text-align: left;
+  padding: 3%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  &:hover{
+    color: #ccc;
+  }
+}
+    }
+    .photoBigShow{
+      position: absolute;
+      width: 100%;
+      min-height:96%;
+      background-color: rgba(0,0,0,0.8);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
 
+    }
 }

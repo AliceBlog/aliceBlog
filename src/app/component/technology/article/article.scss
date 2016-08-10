@@ -22,16 +22,15 @@
       position: absolute;
       left: 20px;
       top: 20px;
-      border-radius: 50%;
-      font-size: 30px;
-      color: #ccc;
-      padding: 10px;
-      border: 1px solid #ccc;
+
+      font-size: 20px;
+      color: #333;
+
       font-weight: bold;
       cursor: pointer;
       text-shadow: 1px 1px 1px #aaa;
       &:hover{
-        box-shadow: 3px 3px 3px #aaa;
+        text-shadow: 3px 3px 3px #aaa;
       }
     }
   }

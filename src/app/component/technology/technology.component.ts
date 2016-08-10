@@ -20,7 +20,6 @@ public hotTag:[string];
   private technologyService:TechnologyService
   ) {
     this.technologyService.getTechnologyItems().then(technologyItem=>{
-      console.info(technologyItem);
       this.data = technologyItem.cardList;
       this.hotTag=technologyItem.hotTag;
     });
