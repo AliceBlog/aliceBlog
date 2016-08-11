@@ -89,16 +89,18 @@ z-index: 0;
   position: relative;
   margin: 0px;
   float: left;
-  background: -webkit-radial-gradient(50% 50%, closest-side, rgba(0,162,224,1), #007098, #014e6b);
-  /* Safari 5.1 - 6.0 */
-  background: -o-radial-gradient(50% 50%, closest-side,rgba(0,162,224,0.5), #007098, #014e6b);
-  /* Opera 11.6 - 12.0 */
-  background: -moz-radial-gradient(50% 50%, closest-side,rgba(0,162,224,0.5), #007098, #014e6b);
-  /* Firefox 3.6 - 15 */
-  background: radial-gradient(50% 50%, closest-side, rgba(0,162,224,0.5), #007098, #014e6b);
-}
+  // background: -webkit-radial-gradient(50% 50%, closest-side, rgba(0,162,224,1), #007098, #014e6b);
+  // /* Safari 5.1 - 6.0 */
+  // background: -o-radial-gradient(50% 50%, closest-side,rgba(0,162,224,0.5), #007098, #014e6b);
+  // /* Opera 11.6 - 12.0 */
+  // background: -moz-radial-gradient(50% 50%, closest-side,rgba(0,162,224,0.5), #007098, #014e6b);
+  // /* Firefox 3.6 - 15 */
+  // background: radial-gradient(50% 50%, closest-side, rgba(0,162,224,0.5), #007098, #014e6b);
+
+  }
+
 .clock:hover{
-  background:#014e6b;
+  // background:#014e6b;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 .clock span {

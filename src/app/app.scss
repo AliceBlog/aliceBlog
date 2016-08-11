@@ -1,3 +1,4 @@
+@import "./../assets/styles/common.scss";
 .deskbook {
     width: 100%;
     height: 100%;
@@ -60,4 +61,210 @@
             margin-top: 10px;
         }
     }
+
+.chooseTheme{
+position: absolute;
+bottom: 170px;
+width: 200px;
+left:70px;
+  a{
+    float: left;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    border: 5px solid rgba(255,255,255,0.9);
+  }
+  .blue{
+    background-color: #007098;
+  }
+  .yellow{
+      background: #d7c30b;
+  }
+  .black{
+    background-color: #000;
+  }
+  .pink{
+    background-color: #ffc1dd;
+  }
+}
+
+
+
+
+.item {
+  cursor: pointer;
+position: absolute;
+  width: 200px;
+  height: 100px;
+  bottom: 70px;
+  left: 50%;
+  margin-left: -50px;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+  left: 100px;
+  z-index: 30;
+  div, span {
+position: absolute;
+}
+}
+.item .chewing {
+  width: 80px;
+  height: 80px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -50px;
+  box-shadow: inset 10px -6px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  -webkit-animation: bounce 0.6s ease-in-out infinite;
+  animation: bounce 0.6s ease-in-out infinite;
+}
+.item .chewing .eye {
+  background: #fff;
+  border-radius: 50%;
+  border-top: 2px solid #111;
+}
+.item .chewing .eye span {
+  width: 4px;
+  height: 4px;
+  background: #232323;
+  border-radius: 2px;
+}
+.item .chewing .eye.left {
+  top: 20px;
+  left: 10px;
+  width: 30px;
+  height: 29px;
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+.item .chewing .eye.left span {
+  top: 12px;
+  left: 20px;
+}
+.item .chewing .eye.right {
+  top: 25px;
+  right:10px;
+  width: 20px;
+  height: 20px;
+  -webkit-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+.item .chewing .eye.right span {
+  top: 9px;
+  left: 7px;
+}
+.item .chewing .mounth {
+  width: 16px;
+  height: 4px;
+  bottom: 17px;
+  left: 33px;
+  background: #fff;
+  border-radius: 50% 50% 100% 100%;
+}
+.item .chewing .arm {
+  width: 15px;
+  height: 16px;
+  bottom: 28px;
+  border-radius: 7px;
+  z-index: -1;
+  -webkit-animation: arm-bounce 0.7s ease-in infinite;
+  animation: arm-bounce 0.7s ease-in infinite;
+}
+.item .chewing .arm.left {
+  left: -13px;
+  -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+.item .chewing .arm.right {
+  right: -13px;
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+.item .shadow {
+  width: 70px;
+  height: 10px;
+  bottom: -10px;
+  left: -10px;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  background: #333;
+  box-shadow: 0 0 5px #333;
+  -webkit-animation: shadow 0.7s ease-in-out infinite;
+  animation: shadow 0.7s ease-in-out infinite;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.blue{
+  .chewing,.arm{
+    @include  background-color-round(rgba(50, 189, 242, 1), #0689b8, #0277a3);
+  }
+}
+.yellow{
+  .chewing,.arm{
+    @include  background-color-round(#f9ea61, #e8d633, #d7c30b);
+  }
+}
+.black{
+  .chewing,.arm{
+    @include  background-color-round(rgba(21, 249, 249, 1), rgba(6, 194, 194, 1), rgba(5, 144, 144, 1));
+  }
+}
+.pink{
+  .chewing,.arm{
+    @include  background-color-round(rgba(#f6c7e4, 0.94),rgba(#f598d2, 0.94),rgba(#e695c7, 0.94));
+  }
+}
+@keyframes bounce {
+  0% {
+    bottom: 0;
+  }
+  65% {
+    bottom: 8px;
+  }
+  100% {
+    bottom: 0;
+    border-radius: 49% 47% 42% 40%/60% 60% 40% 40%;
+  }
+}
+@keyframes arm-bounce {
+  0%, 100% {
+    bottom: 28px;
+  }
+  33% {
+    bottom: 23px;
+  }
+  40% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  66% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes shadow {
+  0%, 100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+  50% {
+    -webkit-transform: scaleX(0.9);
+    transform: scaleX(0.9);
+  }
+}
+@keyframes mounth {
+  0%, 100% {
+    height: 4px;
+    border-radius: 50% 50% 100% 100%;
+  }
+  50% {
+    height: 8px;
+    bottom: 17px;
+    border-radius: 30% 30% 100% 100%;
+  }
+}
+
 }

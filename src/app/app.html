@@ -1,11 +1,31 @@
 <div class="deskbook">
 
+<bigEye *ngIf="themeColor=='yellow'"></bigEye>
+<rain *ngIf="themeColor=='black'"></rain>
+<pinkTheme *ngIf="themeColor=='pink'"></pinkTheme>
+<!-- <sharkTheme *ngIf="themeColor=='blue'"></sharkTheme> -->
   <div class="menu"  *ngFor="let item of data;let i = index" [routerLink]="[item.url]" (dblclick)="openGoLink(item)">
 <div class="img"><img src="{{item.icon}}"/></div>
    <div class="text">{{item.name}}</div>
   </div>
-<clock></clock>
+<clock *ngIf="themeColor!='black'"></clock>
 <div class="tip">Alice💗Jermine</div>
 <a href="http://www.miitbeian.gov.cn/" target="_blank"><div class="copyRight">苏ICP备16033855号</div></a>
+<div class="item {{themeColor}}"  (click)="handleTheme()">
+  <div class="chewing">
+    <div class="eye left"><span></span></div>
+    <div class="eye right"><span></span></div>
+    <div class="mounth"></div>
+    <div class="arm left"></div>
+    <div class="arm right"></div>
+  </div>
+  <div class="shadow"></div>
+</div>
+<div class="chooseTheme" *ngIf="chooseBox">
+  <a class="chooseBox blue" (click)="handleChangeTheme('blue')"></a>
+  <a class="chooseBox yellow" (click)="handleChangeTheme('yellow')"></a>
+  <a class="chooseBox black" (click)="handleChangeTheme('black')"></a>
+  <a class="pink" (click)="handleChangeTheme('pink')"></a>
+</div>
 </div>
 <router-outlet></router-outlet>
