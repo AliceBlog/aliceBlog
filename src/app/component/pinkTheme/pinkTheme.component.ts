@@ -20,7 +20,6 @@ export class PinkTheme {
  * Check it out at https://github.com/isuttell/sine-waves
  */
 function SineWaveGenerator(options) {
-  var $;
   $.extend(this, options || {});
 
   if (!this.el) {
