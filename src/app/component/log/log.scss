@@ -24,7 +24,22 @@
       }
     }
     .content{
-color: #000;
+      height: 96%;
+      overflow: auto;
+      margin: auto;
+      width: 100%;
+      position: absolute;
+      color: #000;
+      background-color: #eee;
+
+.sayList{
+  width: 4000px;
+  display: block;
+  // width: 100%;
+  height: 90%;
+  position: absolute;
+  bottom:5%;
+}
     }
 
 }

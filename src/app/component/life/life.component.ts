@@ -13,7 +13,7 @@ export class Life {
   public showBigPhoto:boolean=false;
   public showPhotoLayer:boolean=false;
 
-  imgDeal(url){
+  public static imgDeal(url){
     let img=new Image();
     let style;
     img.src=url;

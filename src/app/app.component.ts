@@ -7,12 +7,9 @@ import { JSONP_PROVIDERS }  from '@angular/http';
 import { RouterLinkActive, ROUTER_DIRECTIVES } from '@angular/router';
 import { MenusService } from './menus.service';
 import { MenusModel } from './menus.model';
-import { Clock } from "./component/clock";
+import { Clock,BigEye,Rain,PinkTheme } from "./component/theme";
 import {Router}    from '@angular/router';
-import { BigEye } from "./component/bigEye";
-import { Rain } from "./component/rain";
-import { PinkTheme } from "./component/pinkTheme";
-// import { SharkTheme } from "./component/sharkTheme";
+// import {  } from "./component/sharkTheme";
 
 /*
  * App Component
