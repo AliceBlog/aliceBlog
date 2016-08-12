@@ -7,6 +7,7 @@
     position: absolute;
     left: 0;
     top: 0;
+    font-weight: bold;
     background-color: rgba(0,162,224,1);
     color: #fff;
     background: -webkit-radial-gradient(50% 50%, closest-side, rgba(0,162,224,1), #007098, #014e6b);
@@ -266,5 +267,9 @@ position: absolute;
     border-radius: 30% 30% 100% 100%;
   }
 }
+
+}
+.themeyellow{
+  color: #000;
 
 }
