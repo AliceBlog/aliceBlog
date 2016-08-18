@@ -12,7 +12,7 @@ import { ROUTER_DIRECTIVES } from "@angular/router";
 export class Love {
     public ngAfterViewInit():void{
     var map = new BMap.Map("map", {});                        // 创建Map实例
-    map.centerAndZoom(new BMap.Point(105.000, 38.000), 5);     // 初始化地图,设置中心点坐标和地图级别
+    map.centerAndZoom(new BMap.Point(105.000, 38.000), 4);     // 初始化地图,设置中心点坐标和地图级别
     map.enableScrollWheelZoom();                        //启用滚轮放大缩小
     if (document.createElement('canvas').getContext) {  // 判断当前浏览器是否支持绘制海量点
         var points = [];  // 添加海量点数据

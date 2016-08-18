@@ -1,30 +1,81 @@
 @import "./../../../assets/styles/common.scss";
-
 .window {
-     @include window;
-    .windowBar{
-      text-align: right;
-      padding: 0px 10px 10px 0;
-       @include background-color-two(rgba(0,143,195,0.6),#007098);
-          span{
+    @include window;
+    .windowBar {
+        text-align: right;
+        padding: 0 10px 10px 0;
+        @include background-color-two(rgba(0,143,195,0.6),#007098);
+        span {
             position: absolute;
             top: 5px;
             left: 10px;
             color: #fff;
-          }
-      .close{
-        @include window-bar-but(#ff728d,#fe4568,#ff728d);
-      }
-      .small{
-        @include window-bar-but(#e0dc69,#d3cd20,#e0dc69);
-      }
-      .large{
-        @include window-bar-but(#85f28a,#5bd761,#85f28a);
-
-      }
+        }
+        .close {
+            @include window-bar-but(#ff728d,#fe4568,#ff728d);
+        }
+        .small {
+            @include window-bar-but(#e0dc69,#d3cd20,#e0dc69);
+        }
+        .large {
+            @include window-bar-but(#85f28a,#5bd761,#85f28a);
+        }
     }
-    .content{
-color: #000;
-    }
+    .content {
+        background-color: #c9984d;
+        height: 97%;
+        overflow-y: auto;
+        margin: auto;
+        width: 100%;
+        position: absolute;
 
+        .bookcase {
+            box-shadow: 10px 10px 20px rgba(0,0,0,0.7);
+            background: #4f2605;
+            width: 90%;
+            margin: auto;
+            margin-bottom: 100px;
+            margin-top: 30px;
+            border-left: 15px solid #e8b970;
+            border-right: 15px solid #e8b970;
+            height: auto;
+            .title {
+                background-image: url("./../../../assets/img/top.png");
+                background-size: 100% 100%;
+                height: 44px;
+                line-height: 44px;
+                color: #fff;
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+            .layer {
+                box-shadow: inset 0 60px 60px rgba(0,0,0,1);
+                -webkit-box-shadow: inset 0 60px 60px rgba(0,0,0,1);
+                -moz-box-shadow: inset 0 60px 60px rgba(0,0,0,1);
+                width: 100%;
+                margin:-3%;
+                margin: auto;
+                height: auto;
+                .bookBox{
+                  box-shadow: inset 0 60px 60px rgba(0,0,0,0.6);
+                  -webkit-box-shadow: inset 0 60px 60px rgba(0,0,0,0.6);
+                  -moz-box-shadow: inset 0 60px 60px rgba(0,0,0,0.6);
+                  margin: auto;
+                  width: 95.5%;
+                  height: 150px;
+                  background-image: url("./../../../assets/img/back.png");
+                  background-size: 100% auto;
+                  background-repeat: repeat-y;
+                }
+            }
+            .bottom{
+              width: 100%;
+              height: 20px;
+              background-image: url("./../../../assets/img/layer.png");
+              background-size: 100% 100%;
+              background-repeat: repeat-x;
+            }
+        }
+    }
 }

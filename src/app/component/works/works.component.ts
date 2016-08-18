@@ -3,7 +3,6 @@ import { ROUTER_DIRECTIVES } from "@angular/router";
 
 @Component({
   selector: 'works',
-  pipes: [],
   directives: [ROUTER_DIRECTIVES],
   encapsulation: ViewEncapsulation.None,
   styles: [require('./works.scss')],
@@ -12,7 +11,6 @@ import { ROUTER_DIRECTIVES } from "@angular/router";
 export class Works {
 
   constructor() {
-
   }
 
 }

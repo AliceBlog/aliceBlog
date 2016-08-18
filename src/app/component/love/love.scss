@@ -53,10 +53,10 @@
             // border-bottom: 2px solid rgba(255, 162, 198, 0.6);
         }
         .storyBox {
-            margin: 30px auto auto;
+            margin: 20px auto auto;
             width: 90%;
             position: relative;
-            height: 300px;
+            height: 280px;
             // background-color: #000;
             .story,
             .time {
@@ -84,8 +84,8 @@
                     padding: 0;
                     li {
                         float: left;
-                        margin: 12px;
-                        width: 140px;
+                        margin: 1.5%;
+                        width: 30%;
                         height: 100px;
                         text-align: center;
                     }
@@ -151,7 +151,7 @@
         .mapBox {
             margin: 30px auto auto;
             width: 90%;
-            height: 250px;
+            height: 200px;
             #map {
                 border: 1px solid rgba(190, 226, 115, 1);
                 width: -webkit-calc(100%-2px);
