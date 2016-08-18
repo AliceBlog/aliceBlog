@@ -86,7 +86,7 @@ left:70px;
     background-color: #000;
   }
   .pink{
-    background-color: #ffc1dd;
+    background-color: #6ecdcc;
   }
 }
 
@@ -215,7 +215,7 @@ position: absolute;
 }
 .pink{
   .chewing,.arm{
-    @include  background-color-round(rgba(#f6c7e4, 0.94),rgba(#f598d2, 0.94),rgba(#e695c7, 0.94));
+    @include  background-color-round(rgba(#99f0ef, 0.94),rgba(#6ecdcc, 0.94),rgba(#63bdbc, 0.94));
   }
 }
 @keyframes bounce {
@@ -270,6 +270,6 @@ position: absolute;
 
 }
 .themeyellow{
-  color: #000;
+  // color: #000;
 
 }
