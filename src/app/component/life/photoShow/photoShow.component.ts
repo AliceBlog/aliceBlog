@@ -3,7 +3,6 @@ import {Component, ViewEncapsulation,Input,Output,EventEmitter} from '@angular/c
 @Component({
   selector: 'photoShow',
   pipes: [],
-  // directives: [PieChart, TrafficChart, Feed, Todo, BaCard],
   encapsulation: ViewEncapsulation.Native,
   styles: [require('./photoShow.scss')],
   template: require('./photoShow.html')

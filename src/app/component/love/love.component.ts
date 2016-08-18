@@ -1,10 +1,8 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-import { ROUTER_DIRECTIVES } from "@angular/router";
-// import { Http,Jsonp,URLSearchParams} from "@angular/http";
+
 @Component({
   selector: 'love',
   pipes: [],
-  directives: [ROUTER_DIRECTIVES],
   encapsulation: ViewEncapsulation.None,
   styles: [require('./love.scss')],
   template: require('./love.html')
