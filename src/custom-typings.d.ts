@@ -28,7 +28,9 @@ import * as _ from 'lodash'
  * see https://github.com/typings/registry
  *
  */
-
+declare var BMap:any;
+declare var BMAP_POINT_SIZE_SMALL:any;
+declare var BMAP_POINT_SHAPE_STAR:any;
 declare var jQuery:any;
 declare var GoogleMapsLoader:any;
 declare var L:any;
