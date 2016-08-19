@@ -57,6 +57,8 @@
                 margin:-3%;
                 margin: auto;
                 height: auto;
+
+
                 .bookBox{
                   box-shadow: inset 0 60px 60px rgba(0,0,0,0.6);
                   -webkit-box-shadow: inset 0 60px 60px rgba(0,0,0,0.6);
@@ -67,6 +69,48 @@
                   background-image: url("./../../../assets/img/back.png");
                   background-size: 100% auto;
                   background-repeat: repeat-y;
+                  .book{
+                    border-top-right-radius: 3px;
+                    float: left;
+                    margin-left: 30px;
+                      width: 120px;
+                      position: relative;
+                      top: 8px;
+                      border-right:5px solid #ccc;
+                      box-shadow: 0 5px 5px rgba(255,255,255,0.6);
+                      -webkit-box-shadow: 0 5px 5px rgba(255,255,255,0.6);
+                      -moz-box-shadow: 0 5px 5px rgba(255,255,255,0.6);
+
+                    .imgBox{
+                    width: 100%;
+                      height: 100px;
+                      overflow: hidden;
+                      border-bottom:2px solid #000;
+                    }
+                    .desc{
+                      width: 100%;
+                      background-color: #fff;
+                      .name{
+                        width: 100%;
+                        padding-top: 2px;
+                        text-align:center;
+                        font-size: 14px;
+                        font-weight: bold
+                      }
+                      date{
+                        font-size: 8px;
+                        color: #aaa;
+                        padding-left: 8px;
+                      }
+                      .user{
+                        font-size: 10px;
+                        color: #aaa;
+                        padding-left: 8px;
+                      }
+                    }
+
+                  }
+
                 }
             }
             .bottom{
@@ -77,5 +121,14 @@
               background-repeat: repeat-x;
             }
         }
+.music{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
     }
 }
