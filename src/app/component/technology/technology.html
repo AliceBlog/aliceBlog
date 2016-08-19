@@ -1,9 +1,9 @@
-<div class="window">
+<div [ngClass]="{'window': !isFullScreen,'fullWindow':isFullScreen}">
     <div class="windowBar">
         <span>技术文档</span>
         <div class="close" [routerLink]="['']">×</div>
         <div class="small">—</div>
-        <div class="large">□</div>
+        <div class="large" (click)="fullScreen()">□</div>
     </div>
     <div class="content">
         <div class="header">

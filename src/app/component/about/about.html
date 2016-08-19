@@ -1,8 +1,8 @@
-<div class="window">
+<div [ngClass]="{'window': !isFullScreen,'fullWindow':isFullScreen}">
   <div class="windowBar">
     <div class="close" [routerLink]="['']">×</div>
     <div class="small">—</div>
-    <div class="large">□</div>
+    <div class="large" (click)="fullScreen()">□</div>
   </div>
   <div class="content">
 <!-- <router-outlet></router-outlet> -->
