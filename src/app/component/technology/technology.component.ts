@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, ElementRef } from '@angular/core';
 import { TechnologyService } from './technology.service';
 import { Card } from './card';
 import { Article } from './article';
@@ -19,7 +19,9 @@ export class Technology {
     public hotTag: [string];
     isFullScreen: boolean;
 
-    constructor(public appService: AppService,
+    constructor(
+                public ref:ElementRef,
+                public appService: AppService,
                 private technologyService: TechnologyService) {
         this.technologyService.getTechnologyItems().then(technologyItem=> {
         this.data = technologyItem.cardList;
@@ -32,6 +34,7 @@ export class Technology {
     }
 
     fullScreen() {
+        console.log(this.ref.nativeElement);
         this.isFullScreen = this.appService.fullScreen(this.isFullScreen);
     }
 
