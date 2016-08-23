@@ -4,7 +4,7 @@ import { Component, ElementRef, ViewEncapsulation, ViewContainerRef } from '@ang
 import { AppState } from './app.state';
 import { BaThemePreloader, BaThemeSpinner, Logger } from './services';
 import { JSONP_PROVIDERS }  from '@angular/http';
-import { RouterLinkActive, ROUTER_DIRECTIVES } from '@angular/router';
+import { RouterLinkActive } from '@angular/router';
 import { MenusService } from './menus.service';
 import { MenusModel } from './menus.model';
 import { Clock,BigEye,Rain,PinkTheme } from "./component/theme";
@@ -18,7 +18,7 @@ import {Router}    from '@angular/router';
 @Component({
     selector: 'app',
     pipes: [],
-    directives: [ROUTER_DIRECTIVES, RouterLinkActive, Clock, BigEye,Rain,PinkTheme],
+    directives: [ RouterLinkActive, Clock, BigEye,Rain,PinkTheme],
     providers: [BaThemeSpinner, Logger, MenusService, JSONP_PROVIDERS],
     encapsulation: ViewEncapsulation.None,
     styles: [require('./app.scss')],
