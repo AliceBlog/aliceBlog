@@ -1,10 +1,8 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-import { ROUTER_DIRECTIVES } from "@angular/router";
 
 @Component({
   selector: 'logList',
   pipes: [],
-  directives: [ROUTER_DIRECTIVES],
   encapsulation: ViewEncapsulation.None,
   styles: [require('./logList.scss')],
   template: require('./logList.html')

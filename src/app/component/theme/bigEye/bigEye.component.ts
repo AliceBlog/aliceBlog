@@ -1,10 +1,8 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-import { ROUTER_DIRECTIVES } from "@angular/router";
 
 @Component({
   selector: 'bigEye',
   pipes: [],
-  directives: [ROUTER_DIRECTIVES],
   encapsulation: ViewEncapsulation.None,
   styles: [require('./bigEye.scss')],
   template: require('./bigEye.html')

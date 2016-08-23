@@ -1,0 +1,8 @@
+{
+    "webdriver": {
+        "host": "localhost:3333",
+        "port": "3333",
+        "browsers": "chrome,ie11"
+    },
+    "vars": {}
+}

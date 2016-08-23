@@ -1,18 +1,24 @@
-import {Component, ViewEncapsulation} from '@angular/core';
-import { ROUTER_DIRECTIVES } from "@angular/router";
+import { Component, ViewEncapsulation } from '@angular/core';
+import { AppService } from "../../app.service";
 
 @Component({
-  selector: 'message',
-  pipes: [],
-  directives: [ROUTER_DIRECTIVES],
-  encapsulation: ViewEncapsulation.None,
-  styles: [require('./message.scss')],
-  template: require('./message.html')
+    selector: 'message',
+    pipes: [],
+    providers: [AppService],
+    encapsulation: ViewEncapsulation.None,
+    styles: [require('./message.scss')],
+    template: require('./message.html')
 })
 export class Message {
 
-  constructor() {
+    isFullScreen: boolean;
 
-  }
+    constructor(public appService: AppService) {
+
+    }
+
+    fullScreen() {
+        this.isFullScreen = this.appService.fullScreen(this.isFullScreen);
+    }
 
 }

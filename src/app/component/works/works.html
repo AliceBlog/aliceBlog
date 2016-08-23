@@ -1,4 +1,4 @@
-<div class="window">
+<div [ngClass]="{'window': !isFullScreen,'fullWindow':isFullScreen}">
     <div class="windowBar">
         <div class="close" [routerLink]="['']">×</div>
         <div class="small">—</div>
@@ -9,16 +9,6 @@
             <div class="title">开发类</div>
             <div class="layer">
                 <div class="bookBox">
-                   <div class="book">
-                    <div class="imgBox">
-                     <img [ngStyle]="imgDeal('http://www.witdor.com/aliceBlog/img/menu1.jpg')"  src="http://www.witdor.com/aliceBlog/img/menu1.jpg"/>
-                    </div>
-                    <div class="desc">
-                        <div class="name">大转盘</div>
-                        <date>2016-6-6</date>
-                        <div class="user">Alice</div>
-                    </div>
-                   </div>
                    <div class="book">
                     <div class="imgBox">
                      <img [ngStyle]="imgDeal('http://www.witdor.com/aliceBlog/img/menu1.jpg')"  src="http://www.witdor.com/aliceBlog/img/menu1.jpg"/>
@@ -102,7 +92,6 @@
             <div class="bottom"></div>
 
         </div>
-        <div class="music">
-          <myAudio></myAudio>
-      </div>
+
+
   </div>

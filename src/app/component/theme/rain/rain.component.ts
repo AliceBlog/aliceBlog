@@ -1,10 +1,8 @@
 import {Component, ViewEncapsulation} from '@angular/core';
-import { ROUTER_DIRECTIVES } from "@angular/router";
 
 @Component({
   selector: 'rain',
   pipes: [],
-  directives: [ROUTER_DIRECTIVES],
   encapsulation: ViewEncapsulation.None,
   styles: [require('./rain.scss')],
   template: require('./rain.html')

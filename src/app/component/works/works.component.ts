@@ -1,10 +1,10 @@
 import {Component, ViewEncapsulation} from '@angular/core';
+
 import { ROUTER_DIRECTIVES } from "@angular/router";
-import {MyAudio} from "./myAudio"
 
 @Component({
   selector: 'works',
-  directives: [ROUTER_DIRECTIVES,MyAudio],
+  directives: [ROUTER_DIRECTIVES],
   encapsulation: ViewEncapsulation.None,
   styles: [require('./works.scss')],
   template: require('./works.html')

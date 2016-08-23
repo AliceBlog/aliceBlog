@@ -1,18 +1,29 @@
-import {Component, ViewEncapsulation} from '@angular/core';
-import { ROUTER_DIRECTIVES } from "@angular/router";
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
+import { AppService } from "../../app.service";
 
 @Component({
   selector: 'about',
   pipes: [],
-  directives: [ROUTER_DIRECTIVES],
+  providers:[AppService],
   encapsulation: ViewEncapsulation.None,
   styles: [require('./about.scss')],
   template: require('./about.html')
 })
-export class About {
+export class About implements OnInit{
 
-  constructor() {
+
+  isFullScreen:boolean;
+
+  constructor(public appService:AppService) {
 
   }
+  fullScreen(){
+    this.isFullScreen = this.appService.fullScreen(this.isFullScreen);
+  }
+
+  ngOnInit(): any {
+
+  }
+
 
 }

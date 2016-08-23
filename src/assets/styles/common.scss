@@ -74,3 +74,45 @@ background: radial-gradient(50% 50%, closest-side, $first, $second, $third);
   z-index: 1000;
   background-color: rgba(255,255,255,1);
 }
+
+@mixin fullWindow{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1000;
+  background-color: rgba(255,255,255,1);
+}
+
+
+.fullWindow {
+  @include fullWindow;
+  .windowBar{
+    text-align: right;
+    padding: 0px 10px 10px 0;
+    @include background-color-two(rgba(0,143,195,0.6),#007098);
+    span{
+      position: absolute;
+      top: 5px;
+      left: 10px;
+      color: #fff;
+    }
+    .close{
+      @include window-bar-but(#ff728d,#fe4568,#ff728d);
+    }
+    .small{
+      @include window-bar-but(#e0dc69,#d3cd20,#e0dc69);
+    }
+    .large{
+      @include window-bar-but(#85f28a,#5bd761,#85f28a);
+
+    }
+  }
+  .content{
+    color: #000;
+  }
+
+}
