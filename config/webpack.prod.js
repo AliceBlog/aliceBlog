@@ -191,8 +191,7 @@ module.exports = webpackMerge(commonConfig, {
     failOnHint: true,
     resourcePath: 'src'
   },
-
-  /**
+  /**
    * Html loader advanced options
    *
    * See: https://github.com/webpack/html-loader#advanced-options

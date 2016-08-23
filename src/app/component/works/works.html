@@ -1,6 +1,6 @@
 <div [ngClass]="{'window': !isFullScreen,'fullWindow':isFullScreen}">
     <div class="windowBar">
-        <div class="close" [routerLink]="['']">×</div>
+        <div class="close" (click)="vote('works')">×</div>
         <div class="small">—</div>
         <div class="large">□</div>
     </div>
@@ -64,10 +64,22 @@
         <div class="bookcase">
             <div class="title">音乐类</div>
             <div class="layer">
-                <div class="bookBox"></div>
+                <div class="bookBox">
+                  <div class="book">
+                   <div class="imgBox">
+                    <img [ngStyle]="imgDeal('http://www.witdor.com/aliceBlog/img/menu1.jpg')"  src="http://www.witdor.com/aliceBlog/img/menu1.jpg"/>
+                    <i class="icon iconfont" *ngIf="!musicPlay" (click)="musicStart('http://www.witdor.com/aliceBlog/dist/assets/music/song.mp3')">&#xe6bb;</i>
+                    <i class="icon iconfont" *ngIf="musicPlay" (click)="musicStop()">&#xe735;</i>
+                   </div>
+                   <div class="desc">
+                       <div class="name">音乐小将</div>
+                       <date>2016-6-6</date>
+                       <div class="user">Alice、Jermine</div>
+                   </div>
+                  </div>
+                </div>
             </div>
             <div class="bottom"></div>
-
         </div>
         <div class="bookcase">
             <div class="title">视频类</div>
@@ -92,8 +104,8 @@
             <div class="bottom"></div>
 
         </div>
-<div>
-<myAudio></myAudio>
-</div>
+        <audio  id="music" controls="controls">
+        Your browser does not support the audio element.
+        </audio>
 
   </div>

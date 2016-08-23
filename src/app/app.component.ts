@@ -9,6 +9,14 @@ import { MenusService } from './menus.service';
 import { MenusModel } from './menus.model';
 import { Clock,BigEye,Rain,PinkTheme } from "./component/theme";
 import {Router}    from '@angular/router';
+import { Technology} from "./component/technology";
+import { Life } from "./component/life";
+import { Works } from "./component/works";
+import { About } from "./component/about";
+import { Log } from "./component/log";
+import { Love } from "./component/love";
+import { Message } from "./component/message";
+import { Sentiment } from "./component/sentiment";
 // import {  } from "./component/sharkTheme";
 
 /*
@@ -18,7 +26,9 @@ import {Router}    from '@angular/router';
 @Component({
     selector: 'app',
     pipes: [],
-    directives: [ RouterLinkActive, Clock, BigEye,Rain,PinkTheme],
+    directives: [ RouterLinkActive, Clock, BigEye,Rain,PinkTheme,Technology,
+    Life,Works,About,Log,Love,Message,Sentiment
+  ],
     providers: [BaThemeSpinner, Logger, MenusService, JSONP_PROVIDERS],
     encapsulation: ViewEncapsulation.None,
     styles: [require('./app.scss')],
@@ -27,13 +37,19 @@ import {Router}    from '@angular/router';
 
 export class App {
     public data: MenusModel[] = []; //数据内容
-    public showWindow: boolean = false; //窗口是否显示
     public items;
     private router: Router;
     public chooseBox: boolean = false;
     viewContainerRef: ViewContainerRef;
     public themeColor:string="yellow";
-
+    public technology:boolean=false;
+    public life:boolean=false;
+    public works:boolean=false;
+    public about:boolean=false;
+    public log:boolean=false;
+    public love:boolean=false;
+    public message:boolean=false;
+    public sentiment:boolean=false;
     public constructor(
         private state: AppState,
         private spinner: BaThemeSpinner,
@@ -50,12 +66,10 @@ export class App {
     this.themeColor=localStorage.getItem('themeColor')||"yellow";
     }
     openGoLink(data) {
-        console.log(data);
-        this.showWindow = true;
-        //  this.router.navigate(['/dashboard']);
+    this[data.url]=true;
     }
-    closeWindow() {
-        this.showWindow = false;
+    closeWindow(data) {
+      this[data+""]=false;
     }
     public ngAfterViewInit(): void {
         BaThemePreloader.load().then((values) => {

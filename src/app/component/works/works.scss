@@ -1,4 +1,5 @@
 @import "./../../../assets/styles/common.scss";
+
 .window {
     @include window;
     .windowBar {
@@ -86,6 +87,19 @@
                       height: 100px;
                       overflow: hidden;
                       border-bottom:2px solid #000;
+                      i{
+                      position: absolute;
+                      width: 100%;
+                      height: 100px;
+                      line-height: 100px;
+                      text-align: center;
+                      color: #fff;
+                      font-size: 50px;
+                      background-color: rgba(0,0,0,0.8);
+                      left:0;
+                      top:0;
+                      cursor: pointer;
+                      }
                     }
                     .desc{
                       width: 100%;
@@ -130,5 +144,21 @@
   top: 0;
   z-index: 100;
 }
+.audioLayer{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  left:0;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
     }
+}
+audio{
+  display: none;
 }

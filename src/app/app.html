@@ -4,7 +4,7 @@
 <rain *ngIf="themeColor=='black'"></rain>
 <pinkTheme *ngIf="themeColor=='pink'"></pinkTheme>
 <!-- <sharkTheme *ngIf="themeColor=='blue'"></sharkTheme> -->
-  <div class="menu"  *ngFor="let item of data;let i = index" [routerLink]="[item.url]" (dblclick)="openGoLink(item)">
+  <div class="menu"  *ngFor="let item of data;let i = index" (dblclick)="openGoLink(item)">
 <div class="img"><img src="{{item.icon}}"/></div>
    <div class="text">{{item.name}}</div>
   </div>
@@ -28,4 +28,12 @@
   <a class="pink" (click)="handleChangeTheme('pink')"></a>
 </div>
 </div>
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
+<technology (closeWindow)="closeWindow($event)" *ngIf="technology"></technology>
+<life (closeWindow)="closeWindow($event)"  *ngIf="life"></life>
+<works (closeWindow)="closeWindow($event)"  *ngIf="works"></works>
+<about (closeWindow)="closeWindow($event)"  *ngIf="about"></about>
+<log (closeWindow)="closeWindow($event)"  *ngIf="log"></log>
+<love (closeWindow)="closeWindow($event)"  *ngIf="love"></love>
+<message (closeWindow)="closeWindow($event)"  *ngIf="message"></message>
+<sentiment (closeWindow)="closeWindow($event)"  *ngIf="sentiment"></sentiment>

@@ -1,7 +1,7 @@
 <div [ngClass]="{'window': !isFullScreen,'fullWindow':isFullScreen}">
   <div class="windowBar">
       <span>生活写照</span>
-    <div class="close" [routerLink]="['']">×</div>
+    <div class="close" (click)="vote('life')">×</div>
     <div class="small">—</div>
     <div class="large" (click)="fullScreen()">□</div>
   </div>

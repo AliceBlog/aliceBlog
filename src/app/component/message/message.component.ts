@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation,Output,EventEmitter} from '@angular/core';
 import { AppService } from "../../app.service";
 
 @Component({
@@ -16,7 +16,11 @@ export class Message {
     constructor(public appService: AppService) {
 
     }
-
+    @Output() closeWindow = new EventEmitter<string>();
+    public showComment:boolean=false;
+    vote(agreed: string) {
+        this.closeWindow.emit(agreed);
+      }
     fullScreen() {
         this.isFullScreen = this.appService.fullScreen(this.isFullScreen);
     }
