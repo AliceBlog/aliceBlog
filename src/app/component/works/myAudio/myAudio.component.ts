@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component, ViewEncapsulation,ElementRef} from '@angular/core';
 import { ROUTER_DIRECTIVES } from "@angular/router";
 
 
@@ -10,21 +10,22 @@ import { ROUTER_DIRECTIVES } from "@angular/router";
   template: require('./myAudio.html')
 })
 export class MyAudio {
-
+ public ref:ElementRef;
 /*
 three-js的npm没成功，采用音频流的形式显示音频播放器
 */
-  constructor() {
+  constructor(ref:ElementRef) {
+
+    console.log(this.ref);
   }
   public musicStart(){
-    console.log("into");
 var music=document.getElementById("music");
-    music.play();
+    // music.play();
   }
   public musicPause(){
     console.log("into");
     var music=document.getElementById("music");
-    music.pause();
+    // music.pause();
   }
   public imgDeal(url){
      let img=new Image();

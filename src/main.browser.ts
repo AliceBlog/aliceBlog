@@ -1,38 +1,26 @@
 /*
  * Providers provided by Angular
  */
-import { bootstrap } from '@angular/platform-browser-dynamic';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { decorateComponentRef } from "./platform/environment";
+import { AppModule } from "./app/app.module";
 /*
  * Platform and Environment
  * our providers/directives/pipes
  */
-import { DIRECTIVES, PIPES, PROVIDERS } from './platform/browser';
-import { ENV_PROVIDERS, decorateComponentRef } from './platform/environment';
-import { APP_ROUTER_DIRECTIVES } from './app/app.router';
 
 /*
  * App Component
  * our top level component that holds all of our components
  */
-import { App, APP_PROVIDERS } from './app';
-import { ROUTER_DIRECTIVES } from "@angular/router";
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 /*
  * Bootstrap our Angular app with a top level component `App` and inject
  * our Services and Providers into Angular's dependency injection
  */
-export function main(initialHmrState?:any):Promise<any> {
+export function main(initialHmrState?: any): Promise<any> {
 
-    return bootstrap(App, [
-        ...PROVIDERS,
-        ...ENV_PROVIDERS,
-        ...DIRECTIVES,
-        ...PIPES,
-        ...APP_ROUTER_DIRECTIVES,
-        ...APP_PROVIDERS,
-        ...ROUTER_DIRECTIVES,
-        { provide: LocationStrategy, useClass: HashLocationStrategy }
-    ])
+    return platformBrowserDynamic()
+        .bootstrapModule(AppModule)
         .then(decorateComponentRef)
         .catch(err => console.error(err));
 

@@ -1,5 +1,4 @@
-import { RouterConfig, provideRouter } from "@angular/router";
-import { Pages } from "./component/pages.component";
+import { Routes } from '@angular/router';
 import { Technology} from "./component/technology";
 import { Life } from "./component/life";
 import { Works } from "./component/works";
@@ -9,10 +8,8 @@ import { Love } from "./component/love";
 import { Message } from "./component/message";
 import { Sentiment } from "./component/sentiment";
 
-export const routers: RouterConfig = [
+export const ROUTES: Routes = [
     {
-        path: 'pages', component: Pages,
-    }, {
         path: 'life', component: Life,
     }, {
         path: 'works', component: Works,
@@ -29,8 +26,4 @@ export const routers: RouterConfig = [
     }, {
         path: 'technology', component: Technology,
     },  { path: '**', redirectTo: '' },
-];
-
-export const APP_ROUTER_DIRECTIVES = [
-    provideRouter(routers),
 ];
