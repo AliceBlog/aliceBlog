@@ -29,6 +29,20 @@
         width: 100%;
         position: absolute;
         overflow-x: hidden;
+        h1{
+          width: 100%;
+          color:#ff;
+          position: absolute;
+          left:0;
+          top:0;
+          z-index: 3;
+          text-align: center;
+          color:#ccc;
+          border-bottom:1px solid #ccc;
+          box-shadow: 1px 1px 1px #ccc;
+          margin: 0;
+          padding: 15px 0 15px 0;
+        }
         #myID {
             border: none;
             position: absolute;
@@ -44,9 +58,9 @@
         textarea{
           position: absolute;
           left:0;
-          top: 0;
+          top: 70px;
           width: 96%;
-          height: 85%;
+          height: 80%;
           color: #fff;
           background-color: #222;
           outline: none;
