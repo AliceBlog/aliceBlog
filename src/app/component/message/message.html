@@ -5,7 +5,13 @@
     <div class="large" (click)="fullScreen()">□</div>
   </div>
   <div class="content">
-<!-- <router-outlet></router-outlet> -->
-呵呵哒1
+
+<div id="myID" [ngClass]="{'textBoxHidden':!plate}"></div>
+<textarea [ngClass]="{'textBoxHidden': plate}"></textarea>
+
+<a class="large blue button" [ngClass]="{'textBoxHidden':plate}" (click)="deleteTextValue()">清空</a>
+<a class="large blue button" id="reset">清空</a>
+<a class="large red button" (click)="changeBox()">切换{{plate?"输入框":"手绘板"}}</a>
+<a class="large green button" (click)="saveMessage()">提交</a>
   </div>
 </div>
