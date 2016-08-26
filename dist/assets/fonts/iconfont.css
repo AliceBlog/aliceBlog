@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1470383478'); /* IE9*/
-  src: url('iconfont.eot?t=1470383478#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1470383478') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1470383478') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1470383478#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1471938972'); /* IE9*/
+  src: url('iconfont.eot?t=1471938972#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1471938972') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1471938972') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1471938972#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -15,4 +15,5 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-clawsicon:before { content: "\e603"; }
+.icon-play:before { content: "\e6bb"; }
+.icon-tingzhi:before { content: "\e735"; }

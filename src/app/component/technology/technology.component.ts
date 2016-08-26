@@ -19,7 +19,7 @@ export class Technology {
     public data: [any];
     public hotTag: [string];
     isFullScreen: boolean;
-
+    public dragWindow:boolean=false;
     constructor(
                 public ref:ElementRef,
                 public appService: AppService,
@@ -50,4 +50,21 @@ export class Technology {
     onVoted(agreed: boolean) {
         this.showArticle = agreed;
     }
+    canDrag(){
+      console.log("into");
+     this.dragWindow=true;
+    }
+    dragWindows(event,id){
+      if(this.dragWindow){
+        var event = event || window.event;
+        this.ref.nativeElement.querySelector('#'+id).style.left = event.clientX;
+         this.ref.nativeElement.querySelector('#'+id).style.top = event.clientY ;
+      }
+
+    }
+    stopDrag(){
+      console.log("into");
+      this.dragWindow=false;
+    }
+
 }

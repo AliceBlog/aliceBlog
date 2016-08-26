@@ -1,4 +1,16 @@
 <div class="deskbook theme{{themeColor}}">
+  <center>
+  <div id="tool">
+  	<input type="button" value="锁定范围" />
+      <input type="button" value="水平锁定" />
+      <input type="button" value="垂直锁定" />
+      <input type="button" value="锁定位置" />
+  </div>
+  <p>拖放状态：<span>未开始</span></p>
+  <div id="box">
+  	<h2 class="title"></h2>
+  </div>
+  </center>
 
 <bigEye *ngIf="themeColor=='yellow'"></bigEye>
 <rain *ngIf="themeColor=='black'"></rain>
@@ -9,7 +21,7 @@
    <div class="text">{{item.name}}</div>
   </div>
 <clock *ngIf="themeColor!='black'"></clock>
-<div class="tip">Alice💗Jermine</div>
+<div class="tip">Alice <b style="color:pink9">❤</b> Jermine</div>
 <a href="http://www.miitbeian.gov.cn/" target="_blank"><div class="copyRight">苏ICP备16033855号</div></a>
 <div class="item {{themeColor}}"  (click)="handleTheme()">
   <div class="chewing">

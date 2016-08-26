@@ -1,5 +1,5 @@
-<div [ngClass]="{'window': !isFullScreen,'fullWindow':isFullScreen}">
-    <div class="windowBar">
+<div id="technology" [ngClass]="{'window': !isFullScreen,'fullWindow':isFullScreen}">
+    <div class="windowBar" (mouseup)="stopDrag()" (mousemove)="dragWindows(event,'technology')">
         <span>技术文档</span>
         <div class="close" (click)="vote('technology')">×</div>
         <div class="small">—</div>

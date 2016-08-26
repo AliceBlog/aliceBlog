@@ -38,6 +38,7 @@ import { Sentiment } from "./component/sentiment";
 export class App {
     public data: MenusModel[] = []; //数据内容
     public items;
+    public dragId;
     private router: Router;
     public chooseBox: boolean = false;
     viewContainerRef: ViewContainerRef;
@@ -64,6 +65,7 @@ export class App {
     }
     ngOnInit() {
     this.themeColor=localStorage.getItem('themeColor')||"yellow";
+
     }
     openGoLink(data) {
     this[data.url]=true;
@@ -71,10 +73,13 @@ export class App {
     closeWindow(data) {
       this[data+""]=false;
     }
+
     public ngAfterViewInit(): void {
         BaThemePreloader.load().then((values) => {
             this.spinner.hide();
         });
+
+
     }
     handleTheme(){
       this.chooseBox=!this.chooseBox;

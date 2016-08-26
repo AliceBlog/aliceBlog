@@ -1,13 +1,12 @@
 <div [ngClass]="{'window': !isFullScreen,'fullWindow':isFullScreen}">
-  <div class="windowBar">
-    <div class="close" (click)="vote('about')">×</div>
-    <div class="small">—</div>
-    <div class="large" (click)="fullScreen()">□</div>
-  </div>
-  <div class="content">
-<!-- <router-outlet></router-outlet> -->
-<img src="http://www.witdor.com/aliceBlog/img/menu1.jpg"/>
-<h2>爱冒险，不愿平凡，生活只为自己</h2>
-<p>不纠结于曾经，只珍惜现在，向往未来</p>
-  </div>
+    <div class="windowBar">
+        <div class="close" (click)="vote('about')">×</div>
+        <div class="small">—</div>
+        <div class="large" (click)="fullScreen()">□</div>
+    </div>
+    <div class="content">
+        <img class="headerImg" src="http://www.witdor.com/aliceBlog/img/menu1.jpg" />
+        <h2>爱冒险，不愿平凡，生活只为自己</h2>
+        <p>不纠结于曾经，只珍惜现在，向往未来</p>
+    </div>
 </div>
