@@ -7,6 +7,7 @@ const WebpackNotifierPlugin = require('webpack-notifier');
 const ForkCheckerPlugin = require('awesome-typescript-loader').ForkCheckerPlugin;
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+
 const METADATA = {
   title: 'Aliceの小窝',
   description: 'It belongs only to you and me',
@@ -144,8 +145,7 @@ module.exports = {
 
       {
         test: /\.(ttf|eot|svg)(\?v=.+)?$/, loader: 'file-loader'
-      },
-
+      },  { test: /\.md$/, loader: "html!markdown" },
       {
         test: /bootstrap\/dist\/js\/umd\//,
         loader: 'imports?jQuery=jquery'

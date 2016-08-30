@@ -28,6 +28,11 @@ export class Technology {
         this.data = technologyItem.cardList;
         this.hotTag = technologyItem.hotTag;
         });
+        var showdown  = require('showdown'),
+    converter = new showdown.Converter(),
+    text      = '#hello, markdown!',
+    html      = converter.makeHtml(text);
+    console.log(html);
         // this.technologyService.getMenuItems().subscribe(res=> {
         //   this.data = res;
         // });
