@@ -17,6 +17,7 @@ import { Log } from "./component/log";
 import { Love } from "./component/love";
 import { Message } from "./component/message";
 import { Sentiment } from "./component/sentiment";
+import { Chat } from "./component/chat";
 // import {  } from "./component/sharkTheme";
 
 /*
@@ -27,7 +28,7 @@ import { Sentiment } from "./component/sentiment";
     selector: 'app',
     pipes: [],
     directives: [ RouterLinkActive, Clock, BigEye,Rain,PinkTheme,Technology,
-    Life,Works,About,Log,Love,Message,Sentiment
+    Life,Works,About,Log,Love,Message,Sentiment,Chat
   ],
     providers: [BaThemeSpinner, Logger, MenusService, JSONP_PROVIDERS],
     encapsulation: ViewEncapsulation.None,
@@ -51,6 +52,7 @@ export class App {
     public love:boolean=false;
     public message:boolean=false;
     public sentiment:boolean=false;
+    public chat:boolean=false;
     public constructor(
         private state: AppState,
         private spinner: BaThemeSpinner,
@@ -71,6 +73,7 @@ export class App {
     this[data.url]=true;
     }
     closeWindow(data) {
+      console.log()
       this[data+""]=false;
     }
 
@@ -78,7 +81,25 @@ export class App {
         BaThemePreloader.load().then((values) => {
             this.spinner.hide();
         });
-
+        var viewFullScreen = document.getElementById("view-fullscreen");
+            if (viewFullScreen) {
+                viewFullScreen.addEventListener("click", function () {
+                    var docElm = document.documentElement;
+                    if (docElm.requestFullscreen) {
+                        docElm.requestFullscreen();
+                    }
+                    else if (docElm.msRequestFullscreen) {
+                        docElm.msRequestFullscreen();
+                    }
+                    else if (docElm.mozRequestFullScreen) {
+                        docElm.mozRequestFullScreen();
+                    }
+                    else if (docElm.webkitRequestFullScreen) {
+                        docElm.webkitRequestFullScreen();
+                    }
+                }, false);
+            }
+      
 
     }
     handleTheme(){

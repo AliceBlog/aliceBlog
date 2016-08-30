@@ -7,7 +7,7 @@
   <div class="content">
 <h1>留言板</h1>
 <div id="myID" [ngClass]="{'textBoxHidden':!plate}"></div>
-<textarea [ngClass]="{'textBoxHidden': plate}"></textarea>
+<textarea class="messageText" [ngClass]="{'textBoxHidden': plate}"></textarea>
 
 <a class="large blue button" [ngClass]="{'textBoxHidden':plate}" (click)="deleteTextValue()">清空</a>
 <a class="large blue button" id="reset">清空</a>

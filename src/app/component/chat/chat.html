@@ -1,0 +1,99 @@
+<div class="window" [ngClass]="{'fullWindow':isFullScreen}">
+    <div class="windowBar">
+        <div class="close" (click)="vote('chat')">×</div>
+        <div class="small">—</div>
+        <div class="large" (click)="fullScreen()">□</div>
+    </div>
+    <div class="content">
+      <div class="chatTab">
+      <table>
+       <tr>
+        <td><div class="userImg">
+          <img src="http://www.witdor.com/aliceBlog/img/menu1.jpg" [ngStyle]="imgDeal('http://www.witdor.com/aliceBlog/img/menu1.jpg')" />
+        </div></td>
+        <td>
+        <div class="name">Alice</div>
+          <div class="send sendLeft"><div class="arrow arrowLeft" ></div>我说说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言</div>
+        </td>
+        <td></td>
+       </tr>
+       <tr>
+        <td><div class="userImg">
+          <img src="http://www.witdor.com/aliceBlog/img/menu1.jpg" [ngStyle]="imgDeal('http://www.witdor.com/aliceBlog/img/menu1.jpg')" />
+        </div></td>
+        <td>
+        <div class="name">Alice</div>
+        <div class="send sendLeft"><div class="arrow arrowLeft"></div>我说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言</div>
+      </td>
+        <td></td>
+       </tr>
+       <tr class="right">
+        <td></td>
+        <td>
+        <div class="name">Alice</div>
+        <div class="send"><div class="arrow"></div>我说的一些留些留言我说的一些留言我说的一言我说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言</div>
+         </td>
+        <td><div class="userImg">
+          <img src="http://www.witdor.com/aliceBlog/img/menu1.jpg" [ngStyle]="imgDeal('http://www.witdor.com/aliceBlog/img/menu1.jpg')" />
+        </div></td>
+       </tr>
+       <tr>
+        <td><div class="userImg">
+          <img src="http://www.witdor.com/aliceBlog/img/menu1.jpg" [ngStyle]="imgDeal('http://www.witdor.com/aliceBlog/img/menu1.jpg')" />
+        </div></td>
+        <td>
+        <div class="name">Alice</div>
+          <div class="send sendLeft"><div class="arrow arrowLeft" ></div>我说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言</div>
+        </td>
+        <td></td>
+       </tr>
+       <tr>
+        <td><div class="userImg">
+          <img src="http://www.witdor.com/aliceBlog/img/menu1.jpg" [ngStyle]="imgDeal('http://www.witdor.com/aliceBlog/img/menu1.jpg')" />
+        </div></td>
+        <td>
+        <div class="name">Alice</div>
+        <div class="send sendLeft"><div class="arrow arrowLeft"></div>言我说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言</div>
+      </td>
+        <td></td>
+       </tr>
+       <tr class="right">
+        <td></td>
+        <td>
+        <div class="name">Alice</div>
+        <div class="send"><div class="arrow"></div>我说的我说的一些留言我说的一些留我说的一些留言我说的一些留我说的一些留言我说的一些留我说的一些留言我说的一些留我说的一些留言我说的一些留我说的一些留言我说的一些留一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言</div>
+         </td>
+        <td><div class="userImg">
+          <img src="http://www.witdor.com/aliceBlog/img/menu1.jpg" [ngStyle]="imgDeal('http://www.witdor.com/aliceBlog/img/menu1.jpg')" />
+        </div></td>
+       </tr>
+       <tr class="right">
+        <td></td>
+        <td>
+        <div class="name">Alice</div>
+        <div class="send"><div class="arrow"></div>我留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言</div>
+         </td>
+        <td><div class="userImg">
+          <img src="http://www.witdor.com/aliceBlog/img/menu1.jpg" [ngStyle]="imgDeal('http://www.witdor.com/aliceBlog/img/menu1.jpg')" />
+        </div></td>
+       </tr>
+       <tr class="right">
+        <td></td>
+        <td>
+        <div class="name">Alice</div>
+        <div class="send"><div class="arrow"></div>我说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言我说的一些留言</div>
+         </td>
+        <td><div class="userImg">
+          <img src="http://www.witdor.com/aliceBlog/img/menu1.jpg" [ngStyle]="imgDeal('http://www.witdor.com/aliceBlog/img/menu1.jpg')" />
+        </div></td>
+       </tr>
+      </table>
+      </div>
+      <textarea class="chatText"></textarea>
+      <div class="buttonBar">
+        <button>清空</button>
+        <button>发送</button>
+      </div>
+
+    </div>
+</div>

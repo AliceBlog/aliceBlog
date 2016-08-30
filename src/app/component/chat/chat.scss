@@ -1,0 +1,155 @@
+@import "./../../../assets/styles/common.scss";
+.window {
+    @include window;
+    .windowBar {
+        text-align: right;
+        padding: 0 10px 10px 0;
+        @include background-color-two(rgba(0,143,195,0.6),#007098);
+        span {
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            color: #fff;
+        }
+        .close {
+            @include window-bar-but(#ff728d,#fe4568,#ff728d);
+        }
+        .small {
+            @include window-bar-but(#e0dc69,#d3cd20,#e0dc69);
+        }
+        .large {
+            @include window-bar-but(#85f28a,#5bd761,#85f28a);
+        }
+    }
+    .content {
+        color: #000;
+        background-color: #333;
+        height: 97%;
+        overflow-y: auto;
+        margin: auto;
+        width: 100%;
+        position: absolute;
+        .chatTab {
+            width: 90%;
+            margin-left: 5%;
+            overflow-y: auto;
+            height: 70%;
+            table {
+                width: 100%;
+                td {
+                    padding: 10px;
+                }
+                .name {
+                    color: #ddd;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+                .userImg {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    overflow: hidden;
+                    width: 70px;
+                    height: 70px;
+                }
+                .send {
+                    margin-top: 10px;
+                    position: relative;
+                    width: auto;
+                    height: auto;
+                    max-width: 70%;
+                    // background: #f863f1;
+                    color: #f863f1;
+                    line-height: 20px;
+                    font-size: 16px;
+                    border: 1px solid #f863f1;
+                    background: -webkit-linear-gradient(left, #f863f1, #f863f1) no-repeat;
+                    background: linear-gradient(to right, #f863f1, #f863f1) no-repeat;
+                    background-size: 100% 0;
+                    border-radius: 5px;
+                    /* 圆角 */
+                    padding: 10px;
+                    color: #fff;
+                    margin-left: 25%;
+                    .arrow {
+                        position: absolute;
+                        top: 5px;
+                        right: -16px;
+                        /* 圆角的位置需要细心调试哦 */
+                        width: 0;
+                        height: 0;
+                        font-size: 0;
+                        border: solid 8px;
+                        border-color: rgba(0,0,0,0) rgba(0,0,0,0) rgba(0,0,0,0) #f863f1;
+                    }
+                    .arrowLeft {
+                        left: -16px;
+                        border-color: rgba(0,0,0,0) #00b7ec rgba(0,0,0,0) rgba(0,0,0,0);
+                    }
+                }
+                .sendLeft {
+                    // background: #00b7ec;
+                    // color: #00b7ec;
+                    border: 1px solid #00b7ec;
+                    background: -webkit-linear-gradient(left, #00b7ec, #00b7ec) no-repeat;
+                    background: linear-gradient(to right, #00b7ec, #00b7ec) no-repeat;
+                    background-size: 100% 0;
+                    border-radius: 5px;
+                    text-align: left;
+                    margin-left: 10px;
+                }
+                .right {
+                    text-align: right;
+                }
+            }
+        }
+        .chatText {
+            width: 86%;
+            margin-left: 5%;
+            height: 14%;
+            margin-top: 6%;
+            outline: none;
+            resize: none;
+            font-size: 16px;
+            border: 0;
+            background-color: #555;
+            padding: 2%;
+            color: #fff;
+        }
+        .buttonBar {
+            width: 100%;
+            text-align: right;
+            height: 7%;
+            position: relative;
+            button {
+                text-align: center;
+                float: left;
+                margin-right: 2%;
+                position: absolute;
+                right: 3%;
+                width: 120px;
+                padding: 5px;
+                top: 10px;
+                padding: 5px 20px;
+                border-radius: 10px;
+                font: 16px 'Open Sans', sans-serif;
+                text-transform: uppercase;
+                background: none;
+                outline: none;
+                cursor: pointer;
+                color: #E4F68F;
+                border-color: #E4F68F;
+                background: -webkit-linear-gradient(left, #e4f68f, #e4f68f) no-repeat;
+                background: linear-gradient(to right, #e4f68f, #e4f68f) no-repeat;
+                background-size: 100% 0;
+                &:nth-child(1) {
+                  color: #23ec47;
+                  border-color: #23ec47;
+
+                    right: 22%;
+                }
+            }
+        }
+    }
+}

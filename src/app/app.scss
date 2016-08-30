@@ -18,6 +18,15 @@
     /* Firefox 3.6 - 15 */
     background: radial-gradient(50% 50%, closest-side, rgba(0,162,224,1), #007098, #014e6b);
     /* 标准的语法（必须放在最后） */
+    #view-fullscreen{
+      position: absolute;
+      right: 30px;
+      top: 30px;
+      color: #ddd;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
     .tip {
         position: absolute;
         bottom: 40px;

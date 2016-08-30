@@ -34,12 +34,11 @@
           color:#ff;
           position: absolute;
           left:0;
-          top:0;
+          bottom:10px;
           z-index: 3;
           text-align: center;
           color:#ccc;
-          border-bottom:1px solid #ccc;
-          box-shadow: 1px 1px 1px #ccc;
+          border-top:1px solid #ccc;
           margin: 0;
           padding: 15px 0 15px 0;
         }
@@ -55,7 +54,7 @@
                 height: 100%;
             }
         }
-        textarea{
+        .messageText{
           position: absolute;
           left:0;
           top: 70px;
@@ -74,7 +73,7 @@
             text-align: center;
             margin-left: 20px;
             position: absolute;
-            top: 660px;
+            top: 20px;
             width: 150px;
             height: 30px;
             line-height: 30px;

@@ -1,4 +1,4 @@
-<div id="technology" [ngClass]="{'window': !isFullScreen,'fullWindow':isFullScreen}">
+ <div id="technology" class="window" @flyInOut="'in'" [ngClass]="{'fullWindow':isFullScreen}">
     <div class="windowBar" >
         <span>技术文档</span>
         <div class="close" (click)="vote('technology')">×</div>
