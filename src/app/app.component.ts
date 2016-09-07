@@ -88,12 +88,6 @@ export class App {
                     if (docElm.requestFullscreen) {
                         docElm.requestFullscreen();
                     }
-                    else if (docElm.msRequestFullscreen) {
-                        docElm.msRequestFullscreen();
-                    }
-                    else if (docElm.mozRequestFullScreen) {
-                        docElm.mozRequestFullScreen();
-                    }
                     else if (docElm.webkitRequestFullScreen) {
                         docElm.webkitRequestFullScreen();
                     }
